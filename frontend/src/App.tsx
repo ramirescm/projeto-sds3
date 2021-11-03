@@ -1,6 +1,6 @@
 import BarChat from "components/BarChart";
 import DataTable from "components/DataTable";
-import DonutChat from "components/DonutChart";
+import DonutChart from "components/DonutChart";
 import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 
@@ -17,7 +17,7 @@ function App() {
           </div>
           <div className="col-sm-6">
             <h5>Todas vendas</h5>
-            <DonutChat />
+            <DonutChart />
           </div>
         </div>
 
