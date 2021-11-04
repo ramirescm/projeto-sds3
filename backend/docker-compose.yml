@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  devsuperior-postgres:
+    image: postgres:10.4
+    container_name: dsvendas_postgres_container
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=dsvendas
+#    volumes:
+#      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+#    networks:
+#      - devsuperior_network          
+  devsuperior-pgadmin:
+    container_name: dsvendas_pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: dsvendas@dsvendas.com
+      PGADMIN_DEFAULT_PASSWORD: dsvendas
+    ports:
+      - 5050:80
+ #   networks:
+ #     - devsuperior_network      
+
+#volumes:
+#  pgdata:
+#networks:
+#  devsuperior_network:
+#    driver: bridge  
